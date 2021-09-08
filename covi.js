@@ -22,7 +22,9 @@ $(document).ready(function(){
         $('.scroll-top').hide();
       }
   
-       $('section').each(function(){
+      // scroll spy 
+  
+      $('section').each(function(){
   
         let top = $(window).scrollTop();
         let offset = $(this).offset().top - 200;
@@ -35,6 +37,7 @@ $(document).ready(function(){
         }
   
       });
+  
     });
   
     // smooth scrolling 
@@ -46,7 +49,8 @@ $(document).ready(function(){
         scrollTop : $($(this).attr('href')).offset().top,
   
       },
-       
+        500,
+        'linear'
       );
   
     });
